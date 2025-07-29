@@ -35,7 +35,7 @@ abstract class BaseButton extends StatelessWidget {
 
   double getBorderRadius();
 
-  double getPadding();
+  EdgeInsets getPadding();
 
   TextStyle getTextStyle();
 
@@ -48,4 +48,10 @@ abstract class BaseButton extends StatelessWidget {
   double getDisabledBorderWidth();
 
   double getDisabledBorderRadius();
+
+  Color getHoverdBackgroundColor();
+
+  Color getFocusedBackgroundColor();
+
+  Color getPressedBackgroundColor();
 }
