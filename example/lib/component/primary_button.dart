@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:upside_component_lib/ui/component/button/base_button.dart';
+import 'package:flutter/material.dart';
 import 'package:upside_component_lib/config/default_values.dart';
 import 'package:upside_component_lib/theme/app_colors.dart';
 import 'package:upside_component_lib/theme/default_theme.dart';
@@ -88,9 +90,9 @@ class PrimaryButton extends BaseButton {
   Color getPressedBackgroundColor() {
     return AppColors.primaryPressed;
   }
-  
+
   @override
   double getIconSize() {
-   return ButtonConstants.defaultIconSize;
+    return ButtonConstants.defaultIconSize;
   }
 }

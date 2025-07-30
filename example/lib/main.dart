@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:upside_component_lib/upside_component_lib.dart';
 import 'package:upside_component_lib_example/component/form_field_screen.dart';
+import 'package:upside_component_lib_example/component/primary_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,6 +49,15 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Text("Form Fields"),
+            ),
+            SizedBox(
+              height: 56,
+              width: 120,
+              child: PrimaryButton(
+                label: "Label",
+                onPressed: () {},
+                leadingIcon: Icon(Icons.star),
+              ),
             ),
           ],
         ),

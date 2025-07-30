@@ -15,11 +15,22 @@ abstract class BaseButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: getBackgroundColor(),
+        foregroundColor: getForegroundColor(),
+
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(getBorderRadius()),
+        ),
+        padding: getPadding(),
+        textStyle: getTextStyle(context),
+        iconSize: getIconSize(),
+      ),
       onPressed: onPressed,
       child: Row(
         children: [
           leadingIcon,
-          Text(label, style: getTextStyle()),
+          Text(label, style: getTextStyle(context)),
         ],
       ),
     );
@@ -37,7 +48,7 @@ abstract class BaseButton extends StatelessWidget {
 
   EdgeInsets getPadding();
 
-  TextStyle getTextStyle();
+  TextStyle getTextStyle(BuildContext context);
 
   Color getDisabledBackgroundColor();
 
@@ -54,4 +65,6 @@ abstract class BaseButton extends StatelessWidget {
   Color getFocusedBackgroundColor();
 
   Color getPressedBackgroundColor();
+
+  double getIconSize();
 }
