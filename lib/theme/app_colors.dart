@@ -6,7 +6,7 @@ class AppColors {
   static  Color primaryHovered = primary.withOpacity(0.08);
   static  Color primaryFocused = primary.withOpacity(0.1);
   static  Color primaryPressed = primary.withOpacity(0.08);
-  static const Color primaryDisabled = Color(0x1A1D1B20);
+  static  Color primaryDisabled = onPrimary.withOpacity(0.1);
   static const Color onPrimaryDisabled = Color(0xFF1D1B20);
 
   static const Color secondary = Color(0xFFCAC4D0);
@@ -25,6 +25,15 @@ class AppColors {
   static Color tertiaryPressed = tertiary.withOpacity(0.08);
   static  Color tertiaryDisabled = tertiary.withOpacity(0.1);
   static const Color onTertiaryDisabled = Color(0xFF1D1B20);
+
+  static const Color destructive = Color(0xFFBA1A1A);
+  static const Color onDestructive = Color(0xFFFFFFFF);
+  static Color destructiveHovered = destructive.withOpacity(0.08);  
+  static Color destructiveFocused = destructive.withOpacity(0.1);
+  static Color destructivePressed = destructive.withOpacity(0.08);
+  static const Color destructiveDisabled = Color(0x1A1D1B20);
+  static const Color onDestructiveDisabled = Color(0xFF1D1B20);
+
 }
 
 
