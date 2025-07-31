@@ -88,9 +88,9 @@ class PrimaryButton extends BaseButton {
   Color getPressedBackgroundColor() {
     return AppColors.primaryPressed;
   }
-  
+
   @override
   double getIconSize() {
-   return ButtonConstants.defaultIconSize;
+    return ButtonConstants.defaultIconSize;
   }
 }

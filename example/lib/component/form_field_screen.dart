@@ -13,10 +13,13 @@ class FormFieldScreen extends StatelessWidget {
           width: 400,
           child: Column(
             children: [
-              UpsideTextInputField(
-                label: "Name",
-                text: "Pasan",
-                onChanged: (val) => "",
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: UpsideTextInputField(
+                  label: "Name",
+                  text: "Pasan",
+                  onChanged: (val) => "",
+                ),
               ),
             ],
           ),

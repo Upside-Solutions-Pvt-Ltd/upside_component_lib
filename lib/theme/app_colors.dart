@@ -34,6 +34,9 @@ class AppColors {
   static const Color destructiveDisabled = Color(0x1A1D1B20);
   static const Color onDestructiveDisabled = Color(0xFF1D1B20);
 
+static const Color textFieldEnabled = Color(0xFF79747E);
+static const Color textFieldFocused = Color(0xFF6750A4);
+static const Color textFieldError = Color(0xFFB3261E);
+static const Color textFieldDisabled = Color(0x1A1D1B20);
+
 }
-
-
