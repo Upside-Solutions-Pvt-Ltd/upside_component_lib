@@ -51,4 +51,24 @@ class UpsideTextInputField extends BaseTextInputField {
   double getFocusedBorderWidth() {
     return TextFieldConstants.focusedTextFieldBorderWidth;
   }
+
+  @override
+  double getDisabledBorderRadius() {
+    return TextFieldConstants.disabledTextFieldRadius;
+  }
+
+  @override
+  double getEnabledBorderRadius() {
+    return TextFieldConstants.enabledTextFieldRadius;
+  }
+
+  @override
+  double getErrorBorderRadius() {
+    return TextFieldConstants.errorTextFieldRadius;
+  }
+
+  @override
+  double getFocusedBorderRadius() {
+    return TextFieldConstants.focusedTextFieldRadius;
+  }
 }

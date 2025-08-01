@@ -18,20 +18,32 @@ abstract class BaseTextInputField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: label,
         enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(getEnabledBorderRadius()),
           borderSide: BorderSide(
             width: getEnabledBorderWidth(),
             color: getEnabledBorderColor(),
           ),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: getFocusedBorderColor(),width: getFocusedBorderWidth(),
-
-        ),),
+          borderRadius: BorderRadius.circular(getFocusedBorderRadius()),
+          borderSide: BorderSide(
+            color: getFocusedBorderColor(),
+            width: getFocusedBorderWidth(),
+          ),
+        ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: getErrorBorderColor(), width: getErrorBorderWidth()),
+          borderRadius: BorderRadius.circular(getErrorBorderRadius()),
+          borderSide: BorderSide(
+            color: getErrorBorderColor(),
+            width: getErrorBorderWidth(),
+          ),
         ),
         disabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: getDisabledBorderColor(), width: getDisabledBorderWidth()),
+          borderRadius: BorderRadius.circular(getDisabledBorderRadius()),
+          borderSide: BorderSide(
+            color: getDisabledBorderColor(),
+            width: getDisabledBorderWidth(),
+          ),
         ),
       ),
       onChanged: onChanged,
@@ -49,10 +61,17 @@ abstract class BaseTextInputField extends StatelessWidget {
 
   double getEnabledBorderWidth();
 
-  double getFocusedBorderWidth() ;
+  double getFocusedBorderWidth();
 
-  double getErrorBorderWidth() ;
-  
-  double getDisabledBorderWidth() ;
+  double getErrorBorderWidth();
 
+  double getDisabledBorderWidth();
+
+  double getEnabledBorderRadius();
+
+  double getFocusedBorderRadius();
+
+  double getErrorBorderRadius();
+
+  double getDisabledBorderRadius();
 }
