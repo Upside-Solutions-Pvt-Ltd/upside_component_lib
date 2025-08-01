@@ -18,28 +18,28 @@ abstract class BaseTextInputField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: label,
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(getEnabledBorderRadius()),
+          borderRadius: BorderRadius.circular(getTextFieldBorderRadius()),
           borderSide: BorderSide(
             width: getEnabledBorderWidth(),
             color: getEnabledBorderColor(),
           ),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(getFocusedBorderRadius()),
+          borderRadius: BorderRadius.circular(getTextFieldBorderRadius()),
           borderSide: BorderSide(
             color: getFocusedBorderColor(),
             width: getFocusedBorderWidth(),
           ),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(getErrorBorderRadius()),
+          borderRadius: BorderRadius.circular(getTextFieldBorderRadius()),
           borderSide: BorderSide(
             color: getErrorBorderColor(),
             width: getErrorBorderWidth(),
           ),
         ),
         disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(getDisabledBorderRadius()),
+          borderRadius: BorderRadius.circular(getTextFieldBorderRadius()),
           borderSide: BorderSide(
             color: getDisabledBorderColor(),
             width: getDisabledBorderWidth(),
@@ -67,11 +67,6 @@ abstract class BaseTextInputField extends StatelessWidget {
 
   double getDisabledBorderWidth();
 
-  double getEnabledBorderRadius();
+  double getTextFieldBorderRadius();
 
-  double getFocusedBorderRadius();
-
-  double getErrorBorderRadius();
-
-  double getDisabledBorderRadius();
 }

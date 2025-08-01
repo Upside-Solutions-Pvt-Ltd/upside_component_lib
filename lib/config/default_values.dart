@@ -14,8 +14,6 @@ class TextFieldConstants {
   static const double errorTextFieldBorderWidth = 1.0;
   static const double disabledTextFieldBorderWidth = 1.0;
 
-  static const double focusedTextFieldRadius = 4.0;
-  static const double enabledTextFieldRadius = 4.0;
-  static const double errorTextFieldRadius = 4.0;
-  static const double disabledTextFieldRadius = 4.0;  
+  static const double textFieldRadius = 4.0;
+
 }
