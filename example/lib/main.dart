@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upside_component_lib_example/component/app_bar_with_drawer_screen.dart';
 import 'package:upside_component_lib_example/component/form_field_screen.dart';
 import 'package:upside_component_lib_example/component/buttons_screen.dart';
 
@@ -59,6 +60,14 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Text("Buttons"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => AppBarWithDrawerScreen()),
+                );
+              },
+              child: Text("App Bar with Drawer"),
             ),
           ],
         ),
