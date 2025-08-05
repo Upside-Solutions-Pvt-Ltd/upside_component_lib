@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class AppBarWithDrawer extends StatelessWidget implements PreferredSizeWidget {
   final String label;
   final Function()? onPressed;
-  const AppBarWithDrawer({super.key, required this.label, this.onPressed});
+  final Icon trailIcon;
+  const AppBarWithDrawer({super.key, required this.label, this.onPressed, required this.trailIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class AppBarWithDrawer extends StatelessWidget implements PreferredSizeWidget {
           Drawer();
         },
       ),
-      actions: [IconButton(icon: Icon(Icons.search), onPressed: () { onPressed?.call(); })],
+      actions: [IconButton(icon: trailIcon, onPressed: () { onPressed?.call(); })],
     );
   }
 

@@ -8,7 +8,7 @@ class AppBarWithDrawerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWithDrawer(label: "App Bar"),
+      appBar: AppBarWithDrawer(label: "App Bar", trailIcon: Icon(Icons.search)),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
