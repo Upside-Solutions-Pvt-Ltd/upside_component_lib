@@ -38,4 +38,7 @@ class AppColors {
   static const Color textFieldFocused = Color(0xFF6750A4);
   static const Color textFieldError = Color(0xFFB3261E);
   static const Color textFieldDisabled = Color(0xFF1D1B20);
+
+  static const Color calendarFocused = Color(0xFF6750A4);
+  static const Color calendarFocusedBorder = Color(0xFF6750A4);
 }

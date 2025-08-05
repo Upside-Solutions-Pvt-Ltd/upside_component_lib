@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:upside_component_lib/theme/app_colors.dart';
 
 class ModalDatePicker extends StatefulWidget {
   const ModalDatePicker({super.key});
@@ -9,8 +10,9 @@ class ModalDatePicker extends StatefulWidget {
 }
 
 class _ModalDatePickerState extends State<ModalDatePicker> {
-  DateTime? _selectedDay;
+  DateTime? _selectedDay = DateTime.now();
   DateTime _focusedDay = DateTime.now();
+
   @override
   Widget build(BuildContext context) {
     return TableCalendar(
@@ -29,12 +31,24 @@ class _ModalDatePickerState extends State<ModalDatePicker> {
           }
         });
       },
-      calendarStyle: const CalendarStyle(
+      calendarStyle: CalendarStyle(
         selectedDecoration: BoxDecoration(
-          color: Color(0xFF6750A4),
+          color: AppColors.calendarFocused,
           shape: BoxShape.circle,
         ),
+        todayDecoration: _selectedDay == null
+            ? BoxDecoration(color: Colors.transparent, shape: BoxShape.circle)
+            : BoxDecoration(
+                border: Border.all(color: AppColors.calendarFocusedBorder),
+                color: Colors.transparent,
+                shape: BoxShape.circle,
+              ),
+        todayTextStyle: _selectedDay == null
+            ? TextStyle(color: Colors.white)
+            : TextStyle(color: Colors.black),
       ),
     );
   }
+
+  
 }
