@@ -3,6 +3,7 @@ import 'package:upside_component_lib_example/component/app_bar_with_drawer_scree
 import 'package:upside_component_lib_example/component/app_bar_with_search_screen.dart';
 import 'package:upside_component_lib_example/component/form_field_screen.dart';
 import 'package:upside_component_lib_example/component/buttons_screen.dart';
+import 'package:upside_component_lib_example/component/modal_data_picker_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -81,6 +82,16 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Text("App Bar with search"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ModalDataPickerScreen(),
+                  ),
+                );
+              },
+              child: Text("Modal Date Picker"),
             ),
           ],
         ),
