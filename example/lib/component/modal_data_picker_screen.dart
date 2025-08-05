@@ -7,16 +7,12 @@ class ModalDataPickerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
 
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: ModalDatePicker(),
-            ),
+            SizedBox(width: 500, height: 500, child: ModalDatePicker()),
           ],
         ),
       ),
