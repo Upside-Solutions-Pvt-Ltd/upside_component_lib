@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:upside_component_lib/ui/component/button/check_box.dart';
 import 'package:upside_component_lib_example/component/app_bar_with_drawer_screen.dart';
 import 'package:upside_component_lib_example/component/app_bar_with_search_screen.dart';
+import 'package:upside_component_lib_example/component/check_box_screen.dart';
 import 'package:upside_component_lib_example/component/form_field_screen.dart';
 import 'package:upside_component_lib_example/component/buttons_screen.dart';
 import 'package:upside_component_lib_example/component/modal_date_picker_screen.dart';
@@ -92,6 +94,14 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Text("Modal Date Picker"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => CheckBoxScreen()),
+                );
+              },
+              child: Text("Check Box"),
             ),
           ],
         ),

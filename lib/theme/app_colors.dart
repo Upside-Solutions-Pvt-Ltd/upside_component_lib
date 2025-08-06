@@ -41,4 +41,7 @@ class AppColors {
 
   static const Color calendarFocused = Color(0xFF6750A4);
   static const Color calendarFocusedBorder = Color(0xFF6750A4);
+
+  static const Color checkBoxActive = Color(0xFF6750A4);
+  static const Color checkBoxInactive = Color(0xFFFFFFFF);
 }
