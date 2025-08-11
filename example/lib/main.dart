@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:upside_component_lib_example/component/app_bar_with_drawer_screen.dart';
 import 'package:upside_component_lib_example/component/app_bar_with_search_screen.dart';
+import 'package:upside_component_lib_example/component/dial_picker_screen.dart';
 import 'package:upside_component_lib_example/component/form_field_screen.dart';
 import 'package:upside_component_lib_example/component/buttons_screen.dart';
 import 'package:upside_component_lib_example/component/modal_date_picker_screen.dart';
@@ -87,11 +88,19 @@ class LandingScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => ModalDataPickerScreen(),
+                    builder: (context) => ModalDatePickerScreen(),
                   ),
                 );
               },
               child: Text("Modal Date Picker"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => DialPickerScreen()),
+                );
+              },
+              child: Text("Dial Picker"),
             ),
           ],
         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:upside_component_lib/ui/component/calendar/modal_date_picker.dart';
+import 'package:upside_component_lib/ui/component/dial_picker/dial_picker.dart';
 
-class ModalDatePickerScreen extends StatelessWidget {
-  const ModalDatePickerScreen({super.key});
+class DialPickerScreen extends StatelessWidget {
+  const DialPickerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ModalDatePickerScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
 
           children: [
-            SizedBox(width: 500, height: 500, child: ModalDatePicker()),
+            SizedBox(width: 500, height: 500, child: DialPicker()),
           ],
         ),
       ),
