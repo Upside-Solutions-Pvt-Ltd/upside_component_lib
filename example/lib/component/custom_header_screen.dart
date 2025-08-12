@@ -7,19 +7,16 @@ class CustomHeaderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-
-          children: [
-            Header.customHeader(
-              context: context,
-              headerText: 'Header',
-              subHeaderText: 'sub heading',
-              icon: Icons.calendar_month,
-            ),
-          ],
-        ),
+      appBar: AppBar(title: const Text('Custom Header Example')),
+      body: Column(
+        children: [
+          Header.customHeader(
+            context: context,
+            headerText: 'Header',
+            subHeaderText: 'sub heading',
+            icon: Icons.calendar_month,
+          ),
+        ],
       ),
     );
   }

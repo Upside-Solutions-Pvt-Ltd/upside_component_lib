@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:upside_component_lib/config/default_values.dart';
+import 'package:upside_component_lib/theme/app_colors.dart';
 
 class Header {
   static Widget customHeader({
@@ -8,27 +10,35 @@ class Header {
     required IconData icon,
     VoidCallback? onIconPressed,
   }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Icon(icon, size: 64, color: Color(0xFF7E84A3)),
-        SizedBox(height: 10),
-        Text(
-          headerText,
-          style: TextStyle(
-            fontSize: Theme.of(context).textTheme.headlineLarge?.fontSize,
-            fontWeight: FontWeight.w400,
+    return Padding(
+      padding: const EdgeInsets.all(CustomHeaderConstants.headerPadding),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            icon,
+            size: CustomHeaderConstants.iconSize,
+            color: AppColors.customHeaderIcon,
           ),
-        ),
-        SizedBox(height: 5),
-        Text(
-          subHeaderText,
-          style: TextStyle(
-            fontSize: Theme.of(context).textTheme.headlineSmall?.fontSize,
-            fontWeight: FontWeight.w400,
+          SizedBox(height: 10),
+          Text(
+            headerText,
+            style: TextStyle(
+              fontSize: Theme.of(context).textTheme.headlineLarge?.fontSize,
+              fontWeight: FontWeight.w400,
+            ),
           ),
-        ),
-      ],
+          SizedBox(height: 5),
+          Text(
+            subHeaderText,
+            style: TextStyle(
+              fontSize: Theme.of(context).textTheme.headlineSmall?.fontSize,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
