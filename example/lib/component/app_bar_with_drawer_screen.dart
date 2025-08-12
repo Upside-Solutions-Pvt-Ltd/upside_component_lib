@@ -17,7 +17,7 @@ class AppBarWithDrawerScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Text("content"),
+              child: Text('content'),
             ),
           ],
         ),
