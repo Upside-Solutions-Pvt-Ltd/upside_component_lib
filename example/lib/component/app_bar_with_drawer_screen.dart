@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:upside_component_lib/ui/component/app_bar/app_bar_with_drawer.dart';
 
@@ -16,7 +17,7 @@ class AppBarWithDrawerScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Text('content'),
+              child: Text("content"),
             ),
           ],
         ),
