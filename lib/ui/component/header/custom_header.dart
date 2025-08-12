@@ -16,10 +16,13 @@ class Header {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            icon,
-            size: CustomHeaderConstants.iconSize,
-            color: AppColors.customHeaderIcon,
+          GestureDetector(
+            onTap: onIconPressed,
+            child: Icon(
+              icon,
+              size: CustomHeaderConstants.iconSize,
+              color: AppColors.customHeaderIcon,
+            ),
           ),
           SizedBox(height: 10),
           Text(
