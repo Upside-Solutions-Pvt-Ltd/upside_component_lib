@@ -16,6 +16,7 @@ dependencies:
   plugin_platform_interface: ^2.0.2
   table_calendar: ^3.2.0
   flutter_svg: ^2.2.0
+  syncfusion_flutter_gauges: ^30.2.6
 
 dev_dependencies:
   flutter_test:
