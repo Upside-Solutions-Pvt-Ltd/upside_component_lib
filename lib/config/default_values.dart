@@ -5,7 +5,6 @@ class ButtonConstants {
   static const EdgeInsets buttonPadding = EdgeInsets.fromLTRB(24, 16, 24, 16);
   static const double defaultBorderWidth = 1.0;
   static const double defaultIconSize = 24.0;
-
 }
 
 class TextFieldConstants {
@@ -15,5 +14,9 @@ class TextFieldConstants {
   static const double disabledTextFieldBorderWidth = 1.0;
 
   static const double textFieldRadius = 4.0;
+}
 
+class CustomHeaderConstants {
+  static const double iconSize = 64.0;
+  static const double headerPadding = 20.0;
 }

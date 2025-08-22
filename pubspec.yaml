@@ -15,6 +15,7 @@ dependencies:
   web: ^1.0.0
   plugin_platform_interface: ^2.0.2
   table_calendar: ^3.2.0
+  flutter_svg: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -54,8 +55,8 @@ flutter:
         fileName: upside_component_lib_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/icons/
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
