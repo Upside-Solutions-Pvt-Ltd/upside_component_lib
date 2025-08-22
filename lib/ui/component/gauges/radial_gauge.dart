@@ -17,10 +17,29 @@ class _RadialGaugeState extends State<RadialGauge> {
         RadialAxis(
           minimum: 0,
           maximum: 100,
+          labelOffset: -30,
           ranges: [
-            GaugeRange(startValue: 0, endValue: 30, color: Colors.green),
-            GaugeRange(startValue: 30, endValue: 70, color: Colors.orange),
-            GaugeRange(startValue: 70, endValue: 100, color: Colors.red),
+            GaugeRange(
+              startValue: 0,
+              endValue: 30,
+              color: Colors.green,
+              startWidth: 35,
+              endWidth: 35,
+            ),
+            GaugeRange(
+              startValue: 30,
+              endValue: 70,
+              color: Colors.orange,
+              startWidth: 35,
+              endWidth: 35,
+            ),
+            GaugeRange(
+              startValue: 70,
+              endValue: 100,
+              color: Colors.red,
+              startWidth: 35,
+              endWidth: 35,
+            ),
           ],
           pointers: [
             NeedlePointer(
@@ -29,6 +48,7 @@ class _RadialGaugeState extends State<RadialGauge> {
               needleColor: Colors.black,
             ),
           ],
+          annotations: [GaugeAnnotation(widget: Container(child: Text('75°')))],
         ),
       ],
     );
