@@ -111,6 +111,7 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Text("Dial Picker"),
+            ),
             TextButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -134,6 +135,7 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Text("svg icons"),
+            ),
             TextButton(
               onPressed: () {
                 Navigator.of(context).push(
