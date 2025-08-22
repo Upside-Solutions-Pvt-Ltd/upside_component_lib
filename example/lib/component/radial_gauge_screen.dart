@@ -23,17 +23,19 @@ class RadialGaugeScreen extends StatelessWidget {
             secondPhaseStartValue: 30,
             thirdPhaseStartValue: 70,
             thirdPhaseEndValue: 100,
-            needleValue: temperatureValues[index],
+            value: temperatureValues[index],
           );
         },
         itemCount: temperatureValues.length,
       ),
       /* Center(
         child: const RadialGauge(
-          firstPhaseStartValue: 0,
-          secondPhaseStartValue: 30,
-          thirdPhaseStartValue: 70,
-          thirdPhaseEndValue: 100,
+          value: -30,
+          firstPhaseStartValue: -50,
+          secondPhaseStartValue: -20,
+          thirdPhaseStartValue: -10,
+          thirdPhaseEndValue: 20,
+
         ),
       ),
       */

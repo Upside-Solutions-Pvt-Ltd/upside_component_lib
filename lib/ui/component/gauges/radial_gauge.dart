@@ -6,15 +6,15 @@ class RadialGauge extends StatefulWidget {
   final double secondPhaseStartValue;
   final double thirdPhaseStartValue;
   final double thirdPhaseEndValue;
-  final double needleValue;
+  final double value;
 
   const RadialGauge({
     super.key,
+    required this.value,
     required this.firstPhaseStartValue,
     required this.secondPhaseStartValue,
     required this.thirdPhaseStartValue,
     required this.thirdPhaseEndValue,
-    required this.needleValue,
   });
 
   @override
@@ -59,7 +59,7 @@ class _RadialGaugeState extends State<RadialGauge> {
           ],
           pointers: [
             NeedlePointer(
-              value: widget.needleValue,
+              value: widget.value,
               needleLength: 0.88,
               needleColor: Colors.black,
               enableAnimation: true,
@@ -67,7 +67,18 @@ class _RadialGaugeState extends State<RadialGauge> {
               animationType: AnimationType.ease,
             ),
           ],
-          annotations: [GaugeAnnotation(widget: Container(child: Text('75°')))],
+          annotations: [
+            GaugeAnnotation(
+              widget: Container(
+                child: Text(
+                  '${widget.value}°',
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyLarge?.copyWith(color: Colors.white),
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     );
