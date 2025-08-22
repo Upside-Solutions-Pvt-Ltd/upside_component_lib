@@ -55,7 +55,7 @@ class _RadialGaugeState extends State<RadialGauge> {
           pointers: [
             NeedlePointer(
               value: 75,
-              needleLength: 0.8,
+              needleLength: 0.88,
               needleColor: Colors.black,
             ),
           ],
