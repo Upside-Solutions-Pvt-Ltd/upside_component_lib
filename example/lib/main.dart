@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
-import 'package:upside_component_lib/upside_component_lib.dart';
+import 'package:upside_component_lib/ui/component/button/check_box.dart';
+import 'package:upside_component_lib/ui/component/button/radio_button.dart';
+import 'package:upside_component_lib_example/component/app_bar_with_drawer_screen.dart';
+import 'package:upside_component_lib_example/component/app_bar_with_search_screen.dart';
+import 'package:upside_component_lib_example/component/check_box_screen.dart';
 import 'package:upside_component_lib_example/component/form_field_screen.dart';
+import 'package:upside_component_lib_example/component/buttons_screen.dart';
+import 'package:upside_component_lib_example/component/modal_date_picker_screen.dart';
+import 'package:upside_component_lib_example/component/radio_button_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,11 +28,20 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LandingScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const LandingScreen(),
+    );
   }
 }
 
 class LandingScreen extends StatelessWidget {
+  const LandingScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,6 +58,60 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Text("Form Fields"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ButtonsScreen()),
+                );
+              },
+              child: Text("Buttons"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => AppBarWithDrawerScreen(),
+                  ),
+                );
+              },
+              child: Text("App Bar with Drawer"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => AppBarWithSearchScreen(),
+                  ),
+                );
+              },
+              child: Text("App Bar with search"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ModalDataPickerScreen(),
+                  ),
+                );
+              },
+              child: Text("Modal Date Picker"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => CheckBoxScreen()),
+                );
+              },
+              child: Text("Check Box"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => RadioButtonScreen()),
+                );
+              },
+              child: Text("Radio Button"),
             ),
           ],
         ),
