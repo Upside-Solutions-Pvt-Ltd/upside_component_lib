@@ -8,7 +8,14 @@ class RadialGaugeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(child: const RadialGauge()),
+      body: Center(
+        child: const RadialGauge(
+          firstPhaseStartValue: 0,
+          secondPhaseStartValue: 30,
+          thirdPhaseStartValue: 70,
+          thirdPhaseEndValue: 100,
+        ),
+      ),
     );
   }
 }

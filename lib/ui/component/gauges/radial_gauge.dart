@@ -2,7 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class RadialGauge extends StatefulWidget {
-  const RadialGauge({super.key});
+  final double firstPhaseStartValue;
+  final double secondPhaseStartValue;
+  final double thirdPhaseStartValue;
+  final double thirdPhaseEndValue;
+
+  const RadialGauge({
+    super.key,
+    required this.firstPhaseStartValue,
+    required this.secondPhaseStartValue,
+    required this.thirdPhaseStartValue,
+    required this.thirdPhaseEndValue,
+  });
 
   @override
   State<RadialGauge> createState() => _RadialGaugeState();
@@ -15,27 +26,27 @@ class _RadialGaugeState extends State<RadialGauge> {
       title: GaugeTitle(text: 'Temperature'),
       axes: [
         RadialAxis(
-          minimum: 0,
-          maximum: 100,
+          minimum: widget.firstPhaseStartValue,
+          maximum: widget.thirdPhaseEndValue,
           labelOffset: -30,
           ranges: [
             GaugeRange(
-              startValue: 0,
-              endValue: 30,
+              startValue: widget.firstPhaseStartValue,
+              endValue: widget.secondPhaseStartValue,
               color: Colors.green,
               startWidth: 35,
               endWidth: 35,
             ),
             GaugeRange(
-              startValue: 30,
-              endValue: 70,
+              startValue: widget.secondPhaseStartValue,
+              endValue: widget.thirdPhaseStartValue,
               color: Colors.orange,
               startWidth: 35,
               endWidth: 35,
             ),
             GaugeRange(
-              startValue: 70,
-              endValue: 100,
+              startValue: widget.thirdPhaseStartValue,
+              endValue: widget.thirdPhaseEndValue,
               color: Colors.red,
               startWidth: 35,
               endWidth: 35,
