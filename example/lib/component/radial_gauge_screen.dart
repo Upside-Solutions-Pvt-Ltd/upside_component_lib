@@ -6,9 +6,29 @@ class RadialGaugeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<double> temperatureValues = [15, 40, 75, 90];
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
+      body: GridView.builder(
+        padding: const EdgeInsets.all(16),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 0.8,
+          mainAxisSpacing: 20,
+          crossAxisSpacing: 50,
+        ),
+        itemBuilder: (context, index) {
+          return RadialGauge(
+            firstPhaseStartValue: 0,
+            secondPhaseStartValue: 30,
+            thirdPhaseStartValue: 70,
+            thirdPhaseEndValue: 100,
+            needleValue: temperatureValues[index],
+          );
+        },
+        itemCount: temperatureValues.length,
+      ),
+      /* Center(
         child: const RadialGauge(
           firstPhaseStartValue: 0,
           secondPhaseStartValue: 30,
@@ -16,6 +36,7 @@ class RadialGaugeScreen extends StatelessWidget {
           thirdPhaseEndValue: 100,
         ),
       ),
+      */
     );
   }
 }
