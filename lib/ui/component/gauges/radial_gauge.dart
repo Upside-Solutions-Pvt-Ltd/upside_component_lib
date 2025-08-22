@@ -29,6 +29,9 @@ class _RadialGaugeState extends State<RadialGauge> {
           minimum: widget.firstPhaseStartValue,
           maximum: widget.thirdPhaseEndValue,
           labelOffset: -30,
+          showLastLabel: true,
+          interval: 10,
+
           ranges: [
             GaugeRange(
               startValue: widget.firstPhaseStartValue,
@@ -57,6 +60,9 @@ class _RadialGaugeState extends State<RadialGauge> {
               value: 75,
               needleLength: 0.88,
               needleColor: Colors.black,
+              enableAnimation: true,
+              animationDuration: 1000,
+              animationType: AnimationType.ease,
             ),
           ],
           annotations: [GaugeAnnotation(widget: Container(child: Text('75°')))],
