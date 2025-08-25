@@ -60,11 +60,11 @@ class _RadialGaugeState extends State<RadialGauge> {
           pointers: [
             NeedlePointer(
               value: widget.value,
-              needleStartWidth: MediaQuery.of(context).size.width > 750
+              needleStartWidth: MediaQuery.of(context).size.width >= 750
                   ? 1
                   : 0.5,
-              needleEndWidth: MediaQuery.of(context).size.width > 750 ? 10 : 5,
-              needleLength: MediaQuery.of(context).size.width > 750
+              needleEndWidth: MediaQuery.of(context).size.width >= 750 ? 10 : 5,
+              needleLength: MediaQuery.of(context).size.width >= 750
                   ? 0.88
                   : 0.7,
               needleColor: Colors.black,
@@ -73,20 +73,32 @@ class _RadialGaugeState extends State<RadialGauge> {
               animationType: AnimationType.ease,
             ),
           ],
-          /*
+
           annotations: [
             GaugeAnnotation(
               widget: Container(
-                child: Text(
-                  '${widget.value}°',
-                  style: Theme.of(
-                    context,
-                  ).textTheme.bodyLarge?.copyWith(color: Colors.white),
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    '${widget.value}°C',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width >= 750
+                          ? 22
+                          : 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
+              angle: 90,
+              positionFactor: 0.5,
             ),
           ],
-          */
         ),
       ],
     );
