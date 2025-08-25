@@ -64,7 +64,9 @@ class _RadialGaugeState extends State<RadialGauge> {
                   ? 1
                   : 0.5,
               needleEndWidth: MediaQuery.of(context).size.width > 750 ? 10 : 5,
-              needleLength: 0.88,
+              needleLength: MediaQuery.of(context).size.width > 750
+                  ? 0.88
+                  : 0.7,
               needleColor: Colors.black,
               enableAnimation: true,
               animationDuration: 1000,
