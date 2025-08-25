@@ -60,6 +60,10 @@ class _RadialGaugeState extends State<RadialGauge> {
           pointers: [
             NeedlePointer(
               value: widget.value,
+              needleStartWidth: MediaQuery.of(context).size.width > 750
+                  ? 1
+                  : 0.5,
+              needleEndWidth: MediaQuery.of(context).size.width > 750 ? 10 : 5,
               needleLength: 0.88,
               needleColor: Colors.black,
               enableAnimation: true,
