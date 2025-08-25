@@ -6,7 +6,14 @@ class RadialGaugeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<double> temperatureValues = [15, 40, 75, 90, 34, 67];
+    Map<String, double> temperatureValues = {
+      "Temperature 1": 15,
+      "Temperature 2": 40,
+      "Temperature 3": 75,
+      "Temperature 4": 90,
+      "Temperature 5": 34,
+      "Temperature 6": 67,
+    };
     return Scaffold(
       appBar: AppBar(),
       body: GridView.builder(
@@ -19,11 +26,12 @@ class RadialGaugeScreen extends StatelessWidget {
         ),
         itemBuilder: (context, index) {
           return RadialGauge(
+            title: temperatureValues.keys.elementAt(index),
             firstPhaseStartValue: 0,
             secondPhaseStartValue: 30,
             thirdPhaseStartValue: 70,
             thirdPhaseEndValue: 100,
-            value: temperatureValues[index],
+            value: temperatureValues.values.elementAt(index),
           );
         },
         itemCount: temperatureValues.length,

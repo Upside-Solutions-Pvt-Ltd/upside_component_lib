@@ -7,9 +7,11 @@ class RadialGauge extends StatefulWidget {
   final double thirdPhaseStartValue;
   final double thirdPhaseEndValue;
   final double value;
+  final String title;
 
   const RadialGauge({
     super.key,
+    required this.title,
     required this.value,
     required this.firstPhaseStartValue,
     required this.secondPhaseStartValue,
@@ -27,7 +29,7 @@ class _RadialGaugeState extends State<RadialGauge> {
     return LayoutBuilder(
       builder: (context, constraints) {
         return SfRadialGauge(
-          title: GaugeTitle(text: 'Temperature'),
+          title: GaugeTitle(text: widget.title),
           axes: [
             RadialAxis(
               minimum: widget.firstPhaseStartValue,
