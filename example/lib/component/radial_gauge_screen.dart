@@ -6,13 +6,13 @@ class RadialGaugeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<double> temperatureValues = [15, 40, 75, 90];
+    List<double> temperatureValues = [15, 40, 75, 90, 34, 67];
     return Scaffold(
       appBar: AppBar(),
       body: GridView.builder(
         padding: const EdgeInsets.all(16),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 380,
           childAspectRatio: 0.8,
           mainAxisSpacing: 20,
           crossAxisSpacing: 50,
