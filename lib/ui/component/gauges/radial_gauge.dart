@@ -67,6 +67,7 @@ class _RadialGaugeState extends State<RadialGauge> {
               animationType: AnimationType.ease,
             ),
           ],
+          /*
           annotations: [
             GaugeAnnotation(
               widget: Container(
@@ -79,6 +80,7 @@ class _RadialGaugeState extends State<RadialGauge> {
               ),
             ),
           ],
+          */
         ),
       ],
     );
