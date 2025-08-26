@@ -28,6 +28,17 @@ class _QRCodeScannerState extends State<QRCodeScanner> {
           for (final barcode in barcodes) {
             debugPrint('Barcode found! ${barcode.rawValue}');
           }
+          if (image != null) {
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: Text(barcodes.first.rawValue ?? ""),
+                  content: Image(image: MemoryImage(image)),
+                );
+              },
+            );
+          }
         },
       ),
     );
