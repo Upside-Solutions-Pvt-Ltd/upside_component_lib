@@ -7,6 +7,7 @@ import 'package:upside_component_lib_example/component/custom_header_screen.dart
 import 'package:upside_component_lib_example/component/dial_picker_screen.dart';
 import 'package:upside_component_lib_example/component/form_field_screen.dart';
 import 'package:upside_component_lib_example/component/modal_date_picker_screen.dart';
+import 'package:upside_component_lib_example/component/qr_code_scanner_screen.dart';
 import 'package:upside_component_lib_example/component/radial_gauge_screen.dart';
 import 'package:upside_component_lib_example/component/radio_button_screen.dart';
 import 'package:upside_component_lib_example/component/svg_icons_screen.dart';
@@ -146,6 +147,14 @@ class LandingScreen extends StatelessWidget {
                 );
               },
               child: Text("Radio Button"),
+            ),
+             TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => QRCodeScannerScreen()),
+                );
+              },
+              child: Text("QRCode Scanner"),
             ),
           ],
         ),
