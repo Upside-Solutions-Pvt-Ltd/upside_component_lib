@@ -11,17 +11,18 @@ class QRCodeScanner extends StatefulWidget {
 }
 
 class _QRCodeScannerState extends State<QRCodeScanner> {
+  final MobileScannerController controller = MobileScannerController(
+    detectionSpeed: DetectionSpeed.normal,
+    returnImage: true,
+    formats: [BarcodeFormat.qrCode],
+  );
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 400,
       height: 400,
       child: MobileScanner(
-        controller: MobileScannerController(
-          detectionSpeed: DetectionSpeed.noDuplicates,
-          returnImage: true,
-          formats: [BarcodeFormat.qrCode],
-        ),
+        controller: controller,
         onDetect: (capture) {
           final List<Barcode> barcodes = capture.barcodes;
           final Uint8List? image = capture.image;
