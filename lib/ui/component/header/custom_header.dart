@@ -2,27 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:upside_component_lib/config/default_values.dart';
 import 'package:upside_component_lib/theme/app_colors.dart';
 
-class Header {
-  static Widget customHeader({
-    required BuildContext context,
-    required String headerText,
-    required String subHeaderText,
-    required IconData icon,
-    VoidCallback? onIconPressed,
-  }) {
+class Header extends StatelessWidget {
+  final String headerText;
+  final String subHeaderText;
+  final IconData icon;
+
+  const Header({
+    super.key,
+    required this.headerText,
+    required this.subHeaderText,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(CustomHeaderConstants.headerPadding),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          GestureDetector(
-            onTap: onIconPressed,
-            child: Icon(
-              icon,
-              size: CustomHeaderConstants.iconSize,
-              color: AppColors.customHeaderIcon,
-            ),
+          Icon(
+            icon,
+            size: CustomHeaderConstants.iconSize,
+            color: AppColors.customHeaderIcon,
           ),
           SizedBox(height: 10),
           Text(

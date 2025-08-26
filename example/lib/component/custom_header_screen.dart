@@ -10,8 +10,7 @@ class CustomHeaderScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Custom Header Example')),
       body: Column(
         children: [
-          Header.customHeader(
-            context: context,
+          Header(
             headerText: 'Header',
             subHeaderText: 'sub heading',
             icon: Icons.calendar_month,
