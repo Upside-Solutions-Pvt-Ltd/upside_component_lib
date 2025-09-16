@@ -9,6 +9,9 @@ class UpsideTextInputField extends BaseTextInputField {
     super.key,
     required super.label,
     required super.text,
+    super.keyboardType,
+    super.controller,
+    super.validator,
     required super.onChanged,
   });
 
