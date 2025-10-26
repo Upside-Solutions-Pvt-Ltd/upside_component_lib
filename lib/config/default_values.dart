@@ -18,5 +18,5 @@ class TextFieldConstants {
 
 class CustomHeaderConstants {
   static const double iconSize = 64.0;
-  static const double headerPadding = 20.0;
+  static const EdgeInsets headerPadding = EdgeInsets.fromLTRB(0, 20, 20, 10);
 }
