@@ -5,7 +5,7 @@ import 'package:upside_component_lib/theme/app_colors.dart';
 import 'package:upside_component_lib/ui/component/form/base_text_input_field.dart';
 
 class UpsideTextInputField extends BaseTextInputField {
-  const UpsideTextInputField({
+ UpsideTextInputField({
     super.key,
     required super.label,
     required super.text,

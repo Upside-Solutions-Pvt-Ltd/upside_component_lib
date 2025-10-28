@@ -1,7 +1,7 @@
 name: upside_component_lib
 description: "Flutter Component Library by Upside Solutions"
 version: 0.0.1
-homepage:
+homepage: "https://example.com"
 
 environment:
   sdk: ^3.8.1
@@ -16,6 +16,7 @@ dependencies:
   plugin_platform_interface: ^2.0.2
   table_calendar: ^3.2.0
   flutter_svg: ^2.2.0
+  mask_text_input_formatter: ^2.9.0
 
 dev_dependencies:
   flutter_test:
