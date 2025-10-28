@@ -22,7 +22,7 @@ abstract class BaseTextInputField extends StatelessWidget {
   });
 
   final phoneMaskFormatter = MaskTextInputFormatter(
-    mask: '+###########',
+    mask: '+94 ## ### ####',
     filter: {"#": RegExp(r'[0-9]')},
     type: MaskAutoCompletionType.lazy,
   );
