@@ -60,6 +60,13 @@ abstract class BaseTextInputField extends StatelessWidget {
             width: getErrorBorderWidth(),
           ),
         ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(getTextFieldBorderRadius()),
+          borderSide: BorderSide(
+            color: getErrorBorderColor(),
+            width: getErrorBorderWidth(),
+          ),
+        ),
         disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(getTextFieldBorderRadius()),
           borderSide: BorderSide(
