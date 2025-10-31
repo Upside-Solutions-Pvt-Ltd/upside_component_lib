@@ -6,45 +6,52 @@ class Header extends StatelessWidget {
   final String headerText;
   final String subHeaderText;
   final IconData icon;
+  final MainAxisAlignment mainAxisAlignment;
+  final CrossAxisAlignment crossAxisAlignment;
+  final Color iconColor;
+  final double iconToHeaderSpacing;
+  final TextAlign headerTextAlign;
+  final TextAlign subHeaderTextAlign;
 
   const Header({
     super.key,
     required this.headerText,
     required this.subHeaderText,
     required this.icon,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.iconColor = AppColors.customHeaderIcon,
+    this.iconToHeaderSpacing = 40,
+    this.headerTextAlign = TextAlign.center,
+    this.subHeaderTextAlign = TextAlign.start,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(CustomHeaderConstants.headerPadding),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(
-            icon,
-            size: CustomHeaderConstants.iconSize,
-            color: AppColors.customHeaderIcon,
+    return Column(
+      mainAxisAlignment: mainAxisAlignment,
+      crossAxisAlignment: crossAxisAlignment,
+      children: [
+        Icon(icon, size: CustomHeaderConstants.iconSize, color: iconColor),
+        SizedBox(height: iconToHeaderSpacing),
+        Text(
+          headerText,
+          style: TextStyle(
+            fontSize: Theme.of(context).textTheme.headlineSmall?.fontSize,
+            fontWeight: FontWeight.w400,
           ),
-          SizedBox(height: 10),
-          Text(
-            headerText,
-            style: TextStyle(
-              fontSize: Theme.of(context).textTheme.headlineLarge?.fontSize,
-              fontWeight: FontWeight.w400,
-            ),
+          textAlign: headerTextAlign,
+        ),
+        SizedBox(height: 15),
+        Text(
+          subHeaderText,
+          style: TextStyle(
+            fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
+            fontWeight: FontWeight.w400,
           ),
-          SizedBox(height: 5),
-          Text(
-            subHeaderText,
-            style: TextStyle(
-              fontSize: Theme.of(context).textTheme.headlineSmall?.fontSize,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ],
-      ),
+          textAlign: subHeaderTextAlign,
+        ),
+      ],
     );
   }
 }
