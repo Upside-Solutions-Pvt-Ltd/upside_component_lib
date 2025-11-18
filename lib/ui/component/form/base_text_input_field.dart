@@ -37,6 +37,7 @@ abstract class BaseTextInputField extends StatelessWidget {
           ? [FilteringTextInputFormatter.digitsOnly]
           : [],
       validator: validator,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         labelText: label,
         enabledBorder: OutlineInputBorder(
